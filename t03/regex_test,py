@@ -1,0 +1,14 @@
+import re
+
+pattern = r'"name"\s*:\s*"(.*)"'
+
+examples = [
+    r'{"name": "Alyssa P. Hacker", "college": "MIT"}',
+    r'{"name": "Alyssa \"Ace\" Hacker", "college": "MIT"}',
+]
+
+for text in examples:
+    match = re.search(pattern, text)
+
+    if match:
+        print(match.group(1))
