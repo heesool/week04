@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Running pre-commit paper build..."
+
+repo_root=$(git rev-parse --show-toplevel) || exit 1
+cd "$repo_root/t04" || exit 1
+
+if ! make paper.pdf; then
+    echo "Error: paper.pdf build failed. Commit rejected."
+    exit 1
+fi
+
+echo "paper.pdf built successfully. Commit allowed."
+exit 0
