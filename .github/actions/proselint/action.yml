@@ -19,4 +19,4 @@ runs:
         fi
 
         echo "Checking ${#markdown_files[@]} Markdown files..."
-        proselint check "${markdown_files[@]}"
+        proselint check --config "$GITHUB_WORKSPACE/proselint.json" "${markdown_files[@]}"

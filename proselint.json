@@ -1,12 +1,10 @@
 {
   "max_errors": 1000,
-  "checks": {},
-  "per_file_checks": {
-    "t02/code-quality.md": {
-      "typography.symbols.curly_quotes": false,
-      "typography.symbols.ellipsis": false,
-      "lexical_illusions": false,
-      "weasel_words.very": false
-    }
-  }
+  "checks": {
+    "typography.symbols.curly_quotes": false,
+    "typography.symbols.ellipsis": false,
+    "lexical_illusions": false,
+    "weasel_words.very": false
+  },
+  "per_file_checks": {}
 }
